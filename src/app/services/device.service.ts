@@ -9,6 +9,7 @@ export class DeviceService {
   constructor(private http: HttpClient) {}
 
   apiUrl = 'http://localhost:5000/devices';
+  // json-server --watch dbDevices.json --port 5000
 
   findAll() {
     return this.http.get<Device[]>('http://localhost:5000/devices');

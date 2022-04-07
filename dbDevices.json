@@ -1,20 +1,6 @@
 {
   "devices": [
     {
-      "id": 3,
-      "nom": "Lamp",
-      "status": "OFF",
-      "room": "Bedroom",
-      "floor": "1ere etage"
-    },
-    {
-      "id": 4,
-      "nom": "PS5",
-      "status": "ON",
-      "room": "Bedroom",
-      "floor": "1ere etage"
-    },
-    {
       "id": 5,
       "nom": "XBOX",
       "status": "ON",
