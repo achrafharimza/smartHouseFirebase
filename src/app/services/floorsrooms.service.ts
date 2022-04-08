@@ -9,8 +9,10 @@ import { Room } from '../models/room';
 export class FloorsroomsService {
   constructor(private http: HttpClient) {}
 
-  apiUrlFloor = 'http://localhost:5000/Floor';
-  apiUrlRoom = 'http://localhost:5000/romm';
+  apiUrlFloor =
+    'https://my-json-server.typicode.com/achrafharimza/Smart-House-Hosting-backend-API-JSON-server-/Floor';
+  apiUrlRoom =
+    'https://my-json-server.typicode.com/achrafharimza/Smart-House-Hosting-backend-API-JSON-server-/romm';
 
   findfloors() {
     return this.http.get<Floor[]>(this.apiUrlFloor);

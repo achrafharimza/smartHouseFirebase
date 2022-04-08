@@ -8,11 +8,11 @@ import { Device } from '../models/device';
 export class DeviceService {
   constructor(private http: HttpClient) {}
 
-  apiUrl = 'http://localhost:5000/devices';
-  // json-server --watch dbDevices.json --port 5000
+  apiUrl =
+    'https://my-json-server.typicode.com/achrafharimza/Smart-House-Hosting-backend-API-JSON-server-/devices';
 
   findAll() {
-    return this.http.get<Device[]>('http://localhost:5000/devices');
+    return this.http.get<Device[]>(this.apiUrl);
   }
   changeStatus(device: Device) {
     return this.http.patch<Device>(`${this.apiUrl}/${device.id}`, {

@@ -24,9 +24,11 @@ export class LoginComponent implements OnInit {
   }
   loginUser() {
     this.userService.login(this.loguser).subscribe((res) => {
-      const token: any = res.accessToken;
-      const emailToken = this.payload(res.accessToken).email;
-      console.log(token);
+      // console.log('res : ', res);
+      const token: any = res[0].accessToken;
+      // console.log('token : ', token);
+      const emailToken = this.payload(res[0].accessToken).email;
+      // console.log(token);
 
       if (this.loguser.email === emailToken) {
         localStorage.setItem('token', token);

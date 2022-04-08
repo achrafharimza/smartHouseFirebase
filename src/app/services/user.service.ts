@@ -30,8 +30,12 @@ export class UserService {
   //   return this.http.post<User>(
   //     `http://localhost:3000/login?email=${loguser.email}&password=${loguser.password}`
   //   );
+  apiUrl =
+    'https://my-json-server.typicode.com/achrafharimza/Smart-House-Hosting-backend-API-JSON-server-/login';
   // }
   login(loguser: User) {
-    return this.http.post<Resp>('http://localhost:3000/login', loguser);
+    return this.http.get<Resp[]>(
+      `${this.apiUrl}?email=${loguser.email}&password=${loguser.password}`
+    );
   }
 }
